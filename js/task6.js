@@ -7,16 +7,15 @@ const products = [
   { name: "Захват", price: 1200, quantity: 2 }
 ];
 
-const calculateTotalPrice = function(products, productName) {
-  console.log(productName);
-  let totlal;
+const calculateTotalPrice = (products, productName) => {
+  // console.log(productName);
 
-  for (const productName of products) {
-    totlal = productName.price * productName.quantity;
-    console.log(totlal);
+  for (const product of products) {
+    let totlal = 0;
+    if (product.name === productName) {
+      return (totlal = product.price * product.quantity);
+    }
   }
-
-  return totlal;
 };
 
 console.log(calculateTotalPrice(products, "Радар")); // 5200
