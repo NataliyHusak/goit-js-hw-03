@@ -9,13 +9,14 @@ const products = [
 
 const calculateTotalPrice = (products, productName) => {
   // console.log(productName);
-
+  let totlalProduct = 0;
   for (const product of products) {
-    let totlal = 0;
     if (product.name === productName) {
-      return (totlal = product.price * product.quantity);
+      const totlal = product.price * product.quantity;
+      totlalProduct += totlal;
     }
   }
+  return totlalProduct;
 };
 
 console.log(calculateTotalPrice(products, "Радар")); // 5200
